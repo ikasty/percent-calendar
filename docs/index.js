@@ -15,15 +15,15 @@ function value(type) {
 };
 
 function percent(value) {
-    return (value * 100).toFixed(8).toString().substring(0, 9) + ' %';
+    return (value * 100).toFixed(8).toString().substring(0, 9);
 }
 
 window.onload = function () {
-    const year  = new ProgressBar.Circle('#year',   Object.assign(opt, {}));
-    const month = new ProgressBar.Circle('#month',  Object.assign(opt, {}));
-    const week  = new ProgressBar.Circle('#week',   Object.assign(opt, {}));
-    const day   = new ProgressBar.Circle('#day',    Object.assign(opt, {}));
-    const hour  = new ProgressBar.Circle('#hour',   Object.assign(opt, {}));
+    const year  = new ProgressBar.Circle('#year', opt);
+    const month = new ProgressBar.Circle('#month', opt);
+    const week  = new ProgressBar.Circle('#week', opt);
+    const day   = new ProgressBar.Circle('#day', opt);
+    const hour  = new ProgressBar.Circle('#hour', opt);
 
     function draw() {
         const year_value  = value('year');
