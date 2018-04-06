@@ -7,7 +7,7 @@
     max-width: 1800px;
     margin: 10px auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: center;
 }
 
@@ -19,7 +19,6 @@
 }
 
 .calendar-text {
-    color: #000 !important;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,6 +27,18 @@
 }
 
 .caption {
+    color: #222;
     margin: 0;
     text-transform: capitalize;
 }
+
+.percent {
+    color: #fcb03c;
+    font: 1.3em bold;
+    margin: 0;
+}
+
+/* dark theme */
+body { background-color: #222; }
+#title { color: #fff; }
+.caption { color: #ccc; }
