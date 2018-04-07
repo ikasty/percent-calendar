@@ -26,6 +26,12 @@ window.onload = function () {
     const week    = new ProgressBar.Circle('#week', opt);
     const day     = new ProgressBar.Circle('#day', opt);
 
+    moment.updateLocale(moment.locale(), {
+        week : {
+            dow : 1, // Monday is the first day of the week
+        },
+    });
+
     function draw() {
         const year_p    = value('year');
         const quarter_p = value('quarter');
