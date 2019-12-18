@@ -39,12 +39,11 @@ window.onload = function () {
         month   .animate(month_p);
         day     .animate(day_p);
 
-        year    .setText(`<p class="caption">year:    ${moment().format('Y' )}</p><p class="percent">${percent(year_p)}</p>`);
-        month   .setText(`<p class="caption">month:   ${moment().format('MM')}</p><p class="percent">${percent(month_p)}</p>`);
-        day     .setText(`<p class="caption">day:     ${moment().format('DD')}</p><p class="percent">${percent(day_p)}</p>`);
+        year    .setText(`<p class="caption">${moment().format('Y' )}</p><p class="percent">${percent(year_p)}</p>`);
+        month   .setText(`<p class="caption">${moment().format('MM')}</p><p class="percent">${percent(month_p)}</p>`);
+        day     .setText(`<p class="caption">${moment().format('DD')}</p><p class="percent">${percent(day_p)}</p>`);
         setTimeout(draw, 1000 - Date.now() / 1000 % 1 * 1000);
     };
 
-    setTimeout(draw, 1000 - Date.now() / 1000 % 1 * 1000);
-    Draw();
+    draw();
 };
